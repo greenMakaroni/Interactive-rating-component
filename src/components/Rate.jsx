@@ -1,10 +1,8 @@
-function Rate() {
-  return;
-  <>
-    <div>
-      <h1> Hello world! </h1>
-    </div>
-  </>;
+
+const Rate = () => {
+  return (
+    <div className="w-[300px] h-[300px] bg-[white]">Rate</div>
+  )
 }
 
-export default Rate;
+export default Rate
