@@ -9,8 +9,8 @@ const Button = (props) => {
         flex 
         justify-center 
         items-center 
-        w-[45px] 
-        h-[45px] 
+        w-[50px] 
+        h-[50px] 
         bg-[#252d37] 
         rounded-[50%]
         duration-300

@@ -1,17 +1,16 @@
 import { useState } from "react"
 import Button from "./Button"
-import thankYouImageURL from "./illustration-thank-you.svg"
-import starIcon from "./icon-star.svg"
 
 const Rate = () => {
   const [rating, setRating] = useState(0)
   const [rated, setRated] = useState(false)
+  
   return (
-    <div className={`flex flex-col shadow w-[360px] p-[25px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#252d37] to-[#121417] from-0% to-[120%] rounded-3xl ${rated ? "items-center justify-center" : "justify-start"}`}>
+    <div className={`flex flex-col shadow w-[360px] p-[30px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#252d37] to-[#121417] from-0% to-[120%] rounded-3xl ${rated ? "items-center justify-center" : "justify-start"}`}>
       {
         rated ?
           <>
-            <img className="opacity-0 animate-elementIn scale-90 mb-[20px] " src={thankYouImageURL} alt="thank-you-image" />
+            <img className="opacity-0 animate-elementIn scale-90 mb-[25px] " src="./illustration-thank-you.svg" alt="thank-you-image" />
             <div className="opacity-0 animate-elementIn bg-[#252d37] mb-[25px] rounded-2xl w-[190px] flex p-[5px] justify-center items-center">
               <p className="text-[#fb7413] text-[15px] mt-[4px] font-['Overpass']"> You selected {rating} out of 5 </p>
             </div>
@@ -23,10 +22,10 @@ const Rate = () => {
           :
 
           <>
-            <div className="opacity-0 animate-elementIn mb-[25px] flex justify-center items-center w-[45px] h-[45px] bg-[#252d37] rounded-[50%]">
-              <img className="scale-90" src={starIcon} alt="star-icon" />
+            <div className="opacity-0 animate-elementIn mb-[25px] flex justify-center items-center w-[50px] h-[50px] bg-[#252d37] rounded-[50%]">
+              <img className="scale-90" src="./icon-star.svg" alt="star-icon" />
             </div>
-            <h1 className="opacity-0 animate-elementIn text-[white] font-['Overpass'] font-normal text-[1.5rem] mb-[5px]"> How did we do?</h1>
+            <h1 className="opacity-0 animate-elementIn text-[white] font-['Overpass'] font-bold text-[1.5rem] mb-[5px]"> How did we do?</h1>
             <p className="opacity-0 animate-elementIn text-[14px] text-[#959eac]"> Please let us know how we did with your support request. All feedback
               is appreciated to help us improve our offering!
             </p>
@@ -66,20 +65,21 @@ const Rate = () => {
           className="
           opacity-0 animate-elementIn
               absolute
-              top-[5vh]
-              text-[white] 
+              bottom-[5vh]
+              text-[black] 
               mb-[5px] 
-              rounded-xl 
-              bg-[#fb7413] 
-              p-[20px] 
-              hover:bg-[white] 
-              hover:text-[#fb7413]
+              rounded-3xl 
+              bg-[white] 
+              py-[10px]
+              px-[50px] 
+              hover:bg-[#fb7413] 
+              hover:text-[white]
               duration-300
               font-['Overpass']
               text-[14px]
               tracking-widest
               font-bold
-              "> BACK TO RATE </button>}
+              "> Rate again </button>}
     </div>
   )
 }
