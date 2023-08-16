@@ -62,6 +62,7 @@ const Rate = () => {
           setRating(0)
         }}
           className="
+          opacity-0 animate-elementIn
               absolute
               top-[5vh]
               text-[white] 
