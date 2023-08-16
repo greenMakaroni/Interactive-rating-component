@@ -1,5 +1,7 @@
 import { useState } from "react"
 import Button from "./Button"
+import thankYouImageURL from "./illustration-thank-you.svg"
+import starIcon from "./icon-star.svg"
 
 const Rate = () => {
   const [rating, setRating] = useState(0)
@@ -9,7 +11,7 @@ const Rate = () => {
       {
         rated ?
           <>
-            <img className="opacity-0 animate-elementIn scale-90 mb-[20px] " src="./images/illustration-thank-you.svg" alt="" />
+            <img className="opacity-0 animate-elementIn scale-90 mb-[20px] " src={thankYouImageURL} alt="thank-you-image" />
             <div className="opacity-0 animate-elementIn bg-[#252d37] mb-[25px] rounded-2xl w-[190px] flex p-[5px] justify-center items-center">
               <p className="text-[#fb7413] text-[15px] mt-[4px] font-['Overpass']"> You selected {rating} out of 5 </p>
             </div>
@@ -22,7 +24,7 @@ const Rate = () => {
 
           <>
             <div className="opacity-0 animate-elementIn mb-[25px] flex justify-center items-center w-[45px] h-[45px] bg-[#252d37] rounded-[50%]">
-              <img className="scale-90" src="./images/icon-star.svg" alt="star-icon" />
+              <img className="scale-90" src={starIcon} alt="star-icon" />
             </div>
             <h1 className="opacity-0 animate-elementIn text-[white] font-['Overpass'] font-normal text-[1.5rem] mb-[5px]"> How did we do?</h1>
             <p className="opacity-0 animate-elementIn text-[14px] text-[#959eac]"> Please let us know how we did with your support request. All feedback
