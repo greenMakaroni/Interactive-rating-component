@@ -5,4 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/Interactive-rating-component/',
   plugins: [react()],
+  assetsInclude: ['**/*.gltf', '**/*.glb', '**/*.jpg', '**/*.svg'],
 })
